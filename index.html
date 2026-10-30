@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adélia Vivian Conscetta — Desenvolvedor Full Stack</title>
+  <meta name="description" content="Portfólio autoral de Adélia Vivian Conscetta, Desenvolvedor full stack. Criatividade que ganha vida. Ideias, projetos e inspiração reunidos em um só lugar.">
+  <meta name="theme-color" content="#171717">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Adélia Vivian Conscetta — Desenvolvedor Full Stack">
+  <meta property="og:description" content="Transformando ideias em resultados por meio da criatividade, dedicação e compromisso.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%23171717'/><circle cx='50' cy='50' r='36' stroke='%23F7A8C4' stroke-width='4' fill='none'/><text x='50%' y='58%' font-family='Space Grotesk, sans-serif' font-size='38' font-weight='bold' fill='%23F7A8C4' text-anchor='middle'>A</text></svg>">
+
+  <!-- Google Fonts: Space Grotesk (Títulos) & Inter (Textos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Folha de estilos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Cursor com Glow personalizado -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- Textura de granulação editorial -->
+  <div class="editorial-grain" aria-hidden="true"></div>
+
+  <!-- Luzes e gradientes ambientais fluidos -->
+  <div class="ambient-glows" aria-hidden="true">
+    <div class="ambient-blob blob-1"></div>
+    <div class="ambient-blob blob-2"></div>
+    <div class="ambient-blob blob-3"></div>
+  </div>
+
+  <!-- ==============================================
+       HEADER / MENU FIXO
+       ============================================== -->
+  <header class="site-header" id="header">
+    <div class="header-inner container">
+      <!-- Logo / Marca Autoral -->
+      <a href="#hero" class="brand-logo" aria-label="Adélia Vivian Conscetta - Ir para o início">
+        <span class="logo-mark">A</span>
+        <span class="logo-text">Adélia Vivian<span class="logo-dot">.</span></span>
+      </a>
+
+      <!-- Status Pill -->
+      <div class="status-indicator" title="Disponível para novos projetos e oportunidades">
+        <span class="status-pulse"></span>
+        <span class="status-label">Disponível para projetos</span>
+      </div>
+
+      <!-- Navegação Principal -->
+      <nav class="main-nav" id="mainNav" aria-label="Navegação do site">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#hero" class="nav-link active">Início</a></li>
+          <li class="nav-item"><a href="#sobre" class="nav-link">Sobre</a></li>
+          <li class="nav-item"><a href="#projetos" class="nav-link">Projetos</a></li>
+          <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <!-- Ações do Header: Alternador de Tema (Modo Claro/Escuro) & Contato -->
+      <div class="header-actions">
+        <!-- Botão Modo Claro/Escuro -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar modo claro e escuro" title="Alternar tema">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- CTA Header -->
+        <a href="#contato" class="btn-header-contact">
+          <span>Conversar</span>
+          <svg class="header-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+
+        <!-- Botão Menu Mobile -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mainNav">
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ==============================================
+         SEÇÃO HERO (FLAGSHIP AUTORAL CINEMATOGRÁFICO)
+         ============================================== -->
+    <section class="hero-section" id="hero" aria-label="Apresentação inicial">
+      <!-- Canvas interativo de constelação e física de partículas -->
+      <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+
+      <!-- Linhas de composição arquitetural -->
+      <div class="hero-grid-lines" aria-hidden="true">
+        <div class="grid-line line-v line-v-left"></div>
+        <div class="grid-line line-v line-v-right"></div>
+        <div class="grid-line line-h line-h-center"></div>
+      </div>
+
+      <div class="container hero-container">
+        <!-- Eyebrow Badge com frase de abertura -->
+        <div class="hero-eyebrow fade-up" style="--delay: 100ms;">
+          <span class="eyebrow-symbol">✦</span>
+          <span class="eyebrow-text">BEM-VINDA(O) AO MEU UNIVERSO</span>
+          <span class="eyebrow-symbol">✦</span>
+        </div>
+
+        <!-- Nome em destaque tipográfico monumental -->
+        <div class="hero-headline-wrap fade-up" style="--delay: 250ms;">
+          <h1 class="hero-name" id="heroTitle">
+            <span class="name-line">Adélia Vivian</span>
+            <span class="name-line highlight-line">Conscetta<span class="accent-period">.</span></span>
+          </h1>
+        </div>
+
+        <!-- Cargo e Frases de Apresentação Estratégicas -->
+        <div class="hero-details fade-up" style="--delay: 400ms;">
+          <div class="role-badge">
+            <span class="role-bracket">[</span>
+            <span class="role-text">Desenvolvedor full stack</span>
+            <span class="role-bracket">]</span>
+          </div>
+
+          <p class="hero-tagline">
+            “Criatividade que ganha vida.”
+          </p>
+
+          <p class="hero-description">
+            Transformando ideias em resultados por meio da criatividade, dedicação e compromisso.
+          </p>
+
+          <p class="hero-subtext">
+            Ideias, projetos e inspiração reunidos em um só lugar.
+          </p>
+        </div>
+
+        <!-- Botões de Ação do Hero -->
+        <div class="hero-cta-group fade-up" style="--delay: 550ms;">
+          <a href="#sobre" class="btn-primary" id="btnExplore">
+            <span class="btn-text">Explorar meu universo</span>
+            <span class="btn-icon-wrapper" aria-hidden="true">
+              <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+            <span class="btn-glow-layer"></span>
+          </a>
+
+          <a href="#projetos" class="btn-secondary" id="btnProjectsHero">
+            <span>Ver Meus Projetos</span>
+          </a>
+        </div>
+
+        <!-- Barra Editorial de Metadados e Indicador de Scroll -->
+        <div class="hero-footer-meta fade-up" style="--delay: 700ms;">
+          <div class="meta-item">
+            <span class="meta-label">DISCIPLINA</span>
+            <span class="meta-val">Full Stack & Engenharia Web</span>
+          </div>
+          <div class="meta-item meta-item-center">
+            <a href="#sobre" class="scroll-prompt" aria-label="Rolar para baixo">
+              <span class="scroll-mouse">
+                <span class="scroll-wheel"></span>
+              </span>
+              <span class="scroll-text">Scroll down</span>
+            </a>
+          </div>
+          <div class="meta-item meta-item-right">
+            <span class="meta-label">DISPONIBILIDADE</span>
+            <span class="meta-val">Projetos & Oportunidades</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SEÇÃO SOBRE MIM (ARTE EDITORIAL SEM IMAGEM EXTERNA)
+         ============================================== -->
+    <section class="section sobre-section" id="sobre" aria-label="Sobre Adélia Vivian Conscetta">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">[ 01 // SOBRE MIM ]</span>
+          <h2 class="section-title">Código com propósito e rigor criativo</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="sobre-grid">
+          <!-- Terminal / Card de Arquitetura Interativo -->
+          <div class="sobre-artistic-card">
+            <div class="terminal-bar">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="terminal-title">adelia_profile.json</span>
+              <span class="terminal-badge">ONLINE</span>
+            </div>
+            <div class="terminal-code">
+              <p><span class="c-keyword">{</span></p>
+              <p class="indent-1"><span class="c-prop">"nome"</span>: <span class="c-str">"Adélia Vivian Conscetta"</span>,</p>
+              <p class="indent-1"><span class="c-prop">"cargo"</span>: <span class="c-str">"Desenvolvedor full stack"</span>,</p>
+              <p class="indent-1"><span class="c-prop">"missao"</span>: <span class="c-str">"Transformando ideias em resultados"</span>,</p>
+              <p class="indent-1"><span class="c-prop">"pilares"</span>: [</p>
+              <p class="indent-2"><span class="c-str">"Criatividade que ganha vida"</span>,</p>
+              <p class="indent-2"><span class="c-str">"Dedicação e compromisso técnico"</span>,</p>
+              <p class="indent-2"><span class="c-str">"Organização e clareza de código"</span></p>
+              <p class="indent-1">],</p>
+              <p class="indent-1"><span class="c-prop">"projetos_publicados"</span>: <span class="c-num">3</span>,</p>
+              <p class="indent-1"><span class="c-prop">"status"</span>: <span class="c-str">"Pronta para novos desafios"</span></p>
+              <p><span class="c-keyword">}</span></p>
+            </div>
+            <div class="terminal-footer">
+              <div class="terminal-stat">
+                <span class="stat-number">100%</span>
+                <span class="stat-text">Autoral & Sem Frameworks</span>
+              </div>
+              <div class="terminal-stat">
+                <span class="stat-number">Full Stack</span>
+                <span class="stat-text">Frontend & Backend</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Conteúdo de Manifesto e Habilidades -->
+          <div class="sobre-content">
+            <h3 class="sobre-heading">
+              Criando soluções completas, do design da interface à lógica do backend.
+            </h3>
+            <p class="text-lead">
+              Sou <strong>Adélia Vivian Conscetta</strong>, desenvolvedora full stack motivada por transformar ideias complexas em interfaces elegantes, intuitivas e sistemas robustos.
+            </p>
+            <p class="text-body">
+              Acredito que a tecnologia atinge seu ápice quando aliada ao compromisso e à atenção obsessiva aos detalhes. Meus projetos refletem essa visão: soluções reais, funcionais e construídas com base sólida.
+            </p>
+
+            <div class="tech-pills-wrap">
+              <h4 class="skills-subheading">Competências & Tecnologias</h4>
+              <div class="tech-grid">
+                <div class="tech-pill"><span class="tech-dot"></span>HTML5 Semântico</div>
+                <div class="tech-pill"><span class="tech-dot"></span>CSS3 Moderno / Responsivo</div>
+                <div class="tech-pill"><span class="tech-dot"></span>JavaScript (ES6+)</div>
+                <div class="tech-pill"><span class="tech-dot"></span>Node.js & Backend</div>
+                <div class="tech-pill"><span class="tech-dot"></span>Autenticação & Sessões</div>
+                <div class="tech-pill"><span class="tech-dot"></span>APIs RESTful</div>
+                <div class="tech-pill"><span class="tech-dot"></span>Git & GitHub</div>
+                <div class="tech-pill"><span class="tech-dot"></span>Deploy na Vercel</div>
+                <div class="tech-pill"><span class="tech-dot"></span>UI/UX Autoral</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SEÇÃO DE PROJETOS REAIS (IDENTIDADE.MD)
+         ============================================== -->
+    <section class="section projetos-section" id="projetos" aria-label="Meus Projetos Reais">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">[ 02 // MEUS PROJETOS REAIS ]</span>
+          <h2 class="section-title">Ideias e sistemas em produção</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Projeto 1: Doceria Right -->
+          <article class="project-card">
+            <div class="card-visual visual-doceria">
+              <div class="visual-deco-circle"></div>
+              <div class="visual-badge">SISTEMA ATIVO</div>
+              <div class="visual-code-preview">
+                <span class="vc-tag">Doceria Right</span>
+                <span class="vc-metric">Vercel Live</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="card-category">CATÁLOGO & GESTÃO</span>
+                <span class="card-year">2026</span>
+              </div>
+              <h3 class="card-title">Doceria Right</h3>
+              <p class="card-desc">
+                Um sistema de doceria desenvolvido com foco em vitrine de produtos artesanais, apresentação agradável e navegação otimizada para pedidos.
+              </p>
+              <div class="card-tags">
+                <span>Frontend</span>
+                <span>JavaScript</span>
+                <span>Vercel</span>
+                <span>UI/UX</span>
+              </div>
+              <div class="card-links">
+                <a href="https://doceria-right.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-card-live">
+                  <span>Ver Deploy</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                <a href="https://github.com/34621-dev/doceria-right" target="_blank" rel="noopener noreferrer" class="btn-card-github">
+                  <span>GitHub</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projeto 2: Sistema Completo de Login -->
+          <article class="project-card">
+            <div class="card-visual visual-login">
+              <div class="visual-deco-circle"></div>
+              <div class="visual-badge">SISTEMA ATIVO</div>
+              <div class="visual-code-preview">
+                <span class="vc-tag">Sistema Login</span>
+                <span class="vc-metric">Segurança & Auth</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="card-category">AUTENTICAÇÃO & FLUXO</span>
+                <span class="card-year">2026</span>
+              </div>
+              <h3 class="card-title">Sistema Completo (Auth)</h3>
+              <p class="card-desc">
+                Um sistema de login completo com fluxos de cadastro, validação segura de credenciais, tratamento de estados e interface responsiva.
+              </p>
+              <div class="card-tags">
+                <span>Auth</span>
+                <span>Validações</span>
+                <span>JavaScript</span>
+                <span>Full Stack</span>
+              </div>
+              <div class="card-links">
+                <a href="https://completo-alpha.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-card-live">
+                  <span>Ver Deploy</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                <a href="https://github.com/34621-dev/completo-" target="_blank" rel="noopener noreferrer" class="btn-card-github">
+                  <span>GitHub</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projeto 3: Mural de Turma -->
+          <article class="project-card">
+            <div class="card-visual visual-mural">
+              <div class="visual-deco-circle"></div>
+              <div class="visual-badge">SISTEMA ATIVO</div>
+              <div class="visual-code-preview">
+                <span class="vc-tag">Mural de Turma</span>
+                <span class="vc-metric">Comunidade & Feed</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="card-category">COLABORAÇÃO • FEED</span>
+                <span class="card-year">2026</span>
+              </div>
+              <h3 class="card-title">Mural de Turma</h3>
+              <p class="card-desc">
+                Um mural interativo para troca de informações, avisos e interação entre os alunos da turma, com design moderno e dinâmico.
+              </p>
+              <div class="card-tags">
+                <span>Interação</span>
+                <span>Feed Dinâmico</span>
+                <span>CSS Moderno</span>
+                <span>Vercel</span>
+              </div>
+              <div class="card-links">
+                <a href="https://front-one-tawny.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-card-live">
+                  <span>Ver Deploy</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                <a href="https://github.com/34621-dev/front" target="_blank" rel="noopener noreferrer" class="btn-card-github">
+                  <span>GitHub</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SEÇÃO DE CONTATO (COM VALIDAÇÃO E COPIAR)
+         ============================================== -->
+    <section class="section contato-section" id="contato" aria-label="Entre em contato com Adélia">
+      <div class="container">
+        <div class="contato-box">
+          <div class="contato-header">
+            <span class="section-tag">[ 03 // CONTATO ]</span>
+            <h2 class="contato-title">Vamos construir algo incrível?</h2>
+            <p class="contato-subtitle">
+              Entre em contato direto para parcerias, propostas ou dúvidas sobre os meus projetos.
+            </p>
+          </div>
+
+          <div class="contato-grid">
+            <!-- Canais Diretos de Contato -->
+            <div class="contato-channels">
+              <!-- E-mail Principal -->
+              <div class="channel-card">
+                <div class="channel-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F7A8C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-name">E-mail Direto</span>
+                  <a href="mailto:adeliaconscett@gmail.com" class="channel-link" id="emailLink1">adeliaconscett@gmail.com</a>
+                </div>
+                <button type="button" class="btn-copy" id="btnCopyEmail1" data-email="adeliaconscett@gmail.com" aria-label="Copiar e-mail adeliaconscett@gmail.com">
+                  <span class="copy-text">Copiar</span>
+                  <svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- E-mail Institucional -->
+              <div class="channel-card">
+                <div class="channel-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F7A8C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-name">E-mail Alternativo</span>
+                  <a href="mailto:34621@raphaeldisanto.com.br" class="channel-link" id="emailLink2">34621@raphaeldisanto.com.br</a>
+                </div>
+                <button type="button" class="btn-copy" id="btnCopyEmail2" data-email="34621@raphaeldisanto.com.br" aria-label="Copiar e-mail 34621@raphaeldisanto.com.br">
+                  <span class="copy-text">Copiar</span>
+                  <svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- LinkedIn -->
+              <div class="channel-card">
+                <div class="channel-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F7A8C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-name">Rede Profissional</span>
+                  <span class="channel-value">LinkedIn • Adélia Vivian Conscetta</span>
+                </div>
+                <a href="https://www.linkedin.com/in/adeliaconscett" target="_blank" rel="noopener noreferrer" class="btn-channel-action">
+                  <span>Conectar</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+              </div>
+
+              <div class="channel-quote">
+                <p>“Transformando ideias em resultados por meio da criatividade, dedicação e compromisso.”</p>
+              </div>
+            </div>
+
+            <!-- Formulário de Contato com Validação em Vanilla JS -->
+            <form class="contato-form" id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="formName" class="form-label">Seu Nome</label>
+                <input type="text" id="formName" class="form-input" placeholder="Digite seu nome completo" required>
+                <span class="form-error" id="nameError">Por favor, informe seu nome.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="formEmail" class="form-label">Seu E-mail</label>
+                <input type="email" id="formEmail" class="form-input" placeholder="seuemail@exemplo.com" required>
+                <span class="form-error" id="emailError">Por favor, insira um e-mail válido.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="formMessage" class="form-label">Sua Mensagem</label>
+                <textarea id="formMessage" class="form-input form-textarea" rows="4" placeholder="Escreva sobre sua ideia ou oportunidade..." required></textarea>
+                <span class="form-error" id="messageError">Por favor, digite sua mensagem.</span>
+              </div>
+
+              <button type="submit" class="btn-submit" id="btnSubmit">
+                <span class="submit-text">Enviar Mensagem</span>
+                <svg class="submit-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+
+              <div class="form-success-banner" id="formSuccess" role="alert" aria-live="polite">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F7A8C4" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Mensagem enviada com sucesso! Entrarei em contato em breve.</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==============================================
+       RODAPÉ DO PORTFÓLIO
+       ============================================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <span class="footer-brand">Adélia Vivian Conscetta</span>
+        <span class="footer-copy">© 2026 • Criatividade que ganha vida.</span>
+      </div>
+      <div class="footer-center">
+        <span class="footer-status">HTML5 • CSS3 • JS Puro • 100% Autoral</span>
+      </div>
+      <div class="footer-right">
+        <a href="#hero" class="btn-back-to-top" id="btnBackToTop" aria-label="Voltar ao início">
+          <span>Voltar ao topo</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Principal -->
+  <script src="script.js"></script>
+</body>
+</html>
